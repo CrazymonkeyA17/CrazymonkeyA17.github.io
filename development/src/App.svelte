@@ -1,18 +1,20 @@
 <script lang="ts">
-	import Contact from "./Contact.svelte";
-	import Navbar from "./Navbar.svelte";
+	import Navigation from "./components/Navigation.svelte";
+	import Content from "./components/Content.svelte";
+
+	let contentSection;
 </script>
 
 <main>
-	<Contact/>
-	<Navbar/>
+	<Navigation bind:selection={contentSection}/>
+	<Content bind:section={contentSection}/>
 </main>
 
 <style>
 	main {
 		padding: 0;
 		margin: 0 auto;
-		flex-direction: row;
+		flex-direction: column;
 		display: inline-flex;
 		height: 100%;
 		max-width: 100%;
