@@ -2145,7 +2145,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			img = element("img");
-    			if (!src_url_equal(img.src, img_src_value = "../img/author.jpg")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "./../img/author.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Nikhil Malhotra");
     			add_location(img, file$7, 2, 0, 4);
     		},
