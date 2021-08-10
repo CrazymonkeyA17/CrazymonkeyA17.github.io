@@ -24,12 +24,12 @@
 <style>
   .contactContent {
     display: flex;
-    width: 45vw;
+    width: 90%;
     flex-direction: column;
     transform: translateY(0vh);
     transition-duration: 2s;
     text-align: right;
-    padding-right: 5vw;
+    padding-right: 10%;
   }
   .contactContent .row {
     display: flex;
@@ -41,8 +41,15 @@
     transition-duration: 2s;
     width: 100%;
   }
+  .contactContent.minMode {
+    padding-right: 0%;
+    width: 100%;
+  }
   .contactContent :global(.icon) {
     color:#522e90;
+  }
+  .contactContent .minrow :global(.icon) {
+    font-size:2em;
   }
   .row .containIcon {
     padding-left:1%;

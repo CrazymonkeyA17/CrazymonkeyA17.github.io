@@ -24,14 +24,14 @@
 <style>
   div {
     height: 100%;
+    width: 100%;
     max-width: 0vw;
     overflow: hidden;
     font-size: xx-large;
-    transition: max-width 0.5s ease-out;
+    transition: max-width 0.5s ease-in-out;
   }
   .show {
     max-width: 100vw;
-    width: 100%;
     background-color: #00000000;
   }
 </style>

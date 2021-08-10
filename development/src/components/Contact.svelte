@@ -59,5 +59,6 @@
   }
   .notdefault .contact_card {
     justify-content: space-around;
+    width: 40vw;
   }
 </style>

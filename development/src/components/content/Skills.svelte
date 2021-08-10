@@ -1,1 +1,3 @@
-Skills.svelte
+<div>
+  Skills
+</div>

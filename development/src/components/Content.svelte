@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { navbarmenu, content } from "../constants";
+  import { navbarmenu } from "../constants";
   import ContentBlock from "./ContentBlock.svelte";
   import Navigation from "./Navigation.svelte";
 
