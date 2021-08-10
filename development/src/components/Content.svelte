@@ -1,25 +1,37 @@
 <script lang="ts">
   import { navbarmenu, content } from "../constants";
   import ContentBlock from "./ContentBlock.svelte";
+  import Navigation from "./Navigation.svelte";
 
   export let section = "Home";
 </script>
 
 <div class="bottom {section === "Home" ? "":"show"}">
-  {#each navbarmenu as item}
-    <ContentBlock show={section['item'] === item} text={content[item]}/>
-  {/each}
+  <Navigation bind:selection={section} topMode={true}/>
+  <div class="container">
+    {#each navbarmenu as item}
+      <ContentBlock show={section['item'] === item} text={item}/>
+    {/each}
+  </div>
 </div>
 
 <style>
   .bottom {
-    transition-duration: 2s;
     background-color: white;
     flex-direction: row;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
   .bottom.show {
     height: 100%;
-    display: inherit;
-    visibility: inherit;
+    max-height: 100vh;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
   }
 </style>

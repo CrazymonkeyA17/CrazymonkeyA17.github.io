@@ -10,15 +10,15 @@
 
 <div class="contactContent {maxMode ? "":"minMode"}">
   <div class="minrow">
-    <div class="containIcon" href="mailto:{email}"><Fa class="icon" icon={faEnvelope}/></div>
-    <div class="containIcon" href="tel:{phonenum}"><Fa class="icon" icon={faPhone}/></div>
-    <div class="containIcon" href={github}><Fa class="icon" icon={faGithub}/></div>
-    <div class="containIcon" href={linkedin}><Fa class="icon" icon={faLinkedinIn}/></div>
+    <a class="containIcon" href="mailto:{email}"><Fa class="icon" icon={faEnvelope}/></a>
+    <a class="containIcon" href="tel:{phonenum}"><Fa class="icon" icon={faPhone}/></a>
+    <a class="containIcon" href={github}><Fa class="icon" icon={faGithub}/></a>
+    <a class="containIcon" href={linkedin}><Fa class="icon" icon={faLinkedinIn}/></a>
   </div>
-  <div class="row"><div class="text" href="mailto:{email}">{email}</div><div class="containIcon" href="mailto:{email}"><Fa class="icon" icon={faEnvelope}/></div></div>
-  <div class="row"><div class="text" href="tel:{phonenum}">{phonenum}</div><div class="containIcon" href="tel:{phonenum}"><Fa class="icon" icon={faPhone}/></div></div>
-  <div class="row"><div class="text" href={github}>{github}</div><div class="containIcon" href={github}><Fa class="icon" icon={faGithub}/></div></div>
-  <div class="row"><div class="text" href={linkedin}>{linkedin}</div><div class="containIcon" href={linkedin}><Fa class="icon" icon={faLinkedinIn}/></div></div>
+  <div class="row"><a class="text" href="mailto:{email}">{email}</a><a class="containIcon" href="mailto:{email}"><Fa class="icon" icon={faEnvelope}/></a></div>
+  <div class="row"><a class="text" href="tel:{phonenum}">{phonenum}</a><a class="containIcon" href="tel:{phonenum}"><Fa class="icon" icon={faPhone}/></a></div>
+  <div class="row"><a class="text" href={github}>{github}</a><a class="containIcon" href={github}><Fa class="icon" icon={faGithub}/></a></div>
+  <div class="row"><a class="text" href={linkedin}>{linkedin}</a><a class="containIcon" href={linkedin}><Fa class="icon" icon={faLinkedinIn}/></a></div>
 </div>
 
 <style>

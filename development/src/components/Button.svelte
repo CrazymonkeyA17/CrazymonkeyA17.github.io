@@ -23,6 +23,6 @@
   }
   .small {
     text-align: center;
-    font-size: 2.0em;
+    font-size: 1.5em;
   }
 </style>

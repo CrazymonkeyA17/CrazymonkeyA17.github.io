@@ -2,26 +2,32 @@
 	import Contact from "./Contact.svelte";
 	import Navbar from "./Navbar.svelte";
 
-  export let selection;
+  export let selection="Home";
+	export let topMode = false;
 </script>
 
-<main class="{selection === "Home" ? "":"bar"}">
-  <Contact on:click={() => selection="Home"} defaultMode={selection === "Home"}/>
-  <Navbar bind:navSelection={selection}/>
+<main class="{topMode ? "bar":""} {(!topMode && selection !== "Home") ? "hide":""}">
+  <Contact on:click={() => selection="Home"} defaultMode={!topMode}/>
+  <Navbar bind:navSelection={selection} navtop={topMode}/>
 </main>
 
 <style>
 	main {
 		padding: 0;
-		margin: 0 auto;
+		margin: 0;
 		flex-direction: row;
 		display: inline-flex;
-		height: 100%;
+		max-height: 100vh;
 		max-width: 100%;
 		width: 100%;
-    transition-duration: 1s;
+		height: 100%;
+    transition: max-height 0.5s ease-out;
+		overflow: hidden;
+	}
+	main.hide {
+		max-height: 0;
 	}
   .bar {
-    height: 10%;
+		max-height: 10vh;
   }
 </style>

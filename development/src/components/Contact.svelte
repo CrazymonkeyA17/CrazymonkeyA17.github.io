@@ -29,7 +29,6 @@
     color: #522e90;
     text-transform: uppercase;
     font-weight: bolder;
-    text-align: center;
     margin-block-start: 0em;
     margin-block-end: 0em;
     width: 95%;
@@ -37,14 +36,16 @@
   }
 	.default .contact_card h1 {
 		font-size: 5em;
-    padding-left: 7.5vw;
+    padding-left: 0vw;
     padding-right: 0%;
     margin-block-end: 0em;
+    text-align: right;
 	}
   .notdefault .contact_card h1 {
 		font-size: 3em;
     padding-left: 2.5%;
     padding-right: 2.5%;
+    text-align: center;
 	}
   .contact_card {
     margin: 0;
@@ -55,5 +56,8 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+  }
+  .notdefault .contact_card {
+    justify-content: space-around;
   }
 </style>

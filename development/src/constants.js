@@ -5,11 +5,3 @@ export const github = "https://github.com/NikhilM42";
 export const linkedin = "https://www.linkedin.com/in/nikhilm42/";
 
 export const navbarmenu = ["ABOUT" ,"SKILLS", "CURRENT", "CAREER", "PROJECTS"];
-
-export const content = {
-  "ABOUT":"ABOUT",
-  "SKILLS":"SKILLS",
-  "CURRENT":"CURRENT",
-  "CAREER":"CAREER",
-  "PROJECTS":"PROJECTS",
-}

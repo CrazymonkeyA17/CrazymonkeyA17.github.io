@@ -2,6 +2,7 @@
   import { navbarmenu } from "../constants";
 	import Button from "./Button.svelte";
 
+	export let navtop = false;
 	export let navSelection = "Home";
 
 	function btnClick(val) {
@@ -9,11 +10,11 @@
 	}
 </script>
 
-<div class="right {navSelection === "Home" ? "":"top"}">
+<div class="right {navtop ? "top":""}">
   <ul>
     {#each navbarmenu as item}
 			<li>
-				<Button buttontext={item} largeMode={navSelection === "Home"} on:click={() => btnClick({item})}/>
+				<Button buttontext={item} largeMode={!navtop} on:click={() => btnClick({item})}/>
 			</li>
 		{/each}
   </ul>
@@ -32,9 +33,10 @@
 	}
 	.top ul {
 		flex-direction: row;
+		padding-inline-start: 0%;
 	}
 	ul {
-		width: 95%;
+		width: 100%;
     padding-inline-start: 5%;
 		display: flex;
 		flex-direction: column;
@@ -43,7 +45,5 @@
 	li {
 		list-style-type: none;
 		width: 100%;
-	}
-	.top ul li {
 	}
 </style>
