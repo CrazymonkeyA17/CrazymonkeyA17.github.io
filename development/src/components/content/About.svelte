@@ -1,3 +1,3 @@
 
 
-<img src="./../img/author.jpg" alt="Nikhil Malhotra">
+<img src="./img/author.jpg" alt="Nikhil Malhotra">
