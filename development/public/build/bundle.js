@@ -2139,27 +2139,54 @@ var app = (function () {
     const file$7 = "src\\components\\content\\About.svelte";
 
     function create_fragment$7(ctx) {
+    	let div1;
     	let img;
     	let img_src_value;
+    	let t0;
+    	let div0;
+    	let h1;
+    	let t2;
+    	let p;
 
     	const block = {
     		c: function create() {
+    			div1 = element("div");
     			img = element("img");
+    			t0 = space();
+    			div0 = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "About Me.";
+    			t2 = space();
+    			p = element("p");
+    			p.textContent = "A mechatronics engineer by education, I am always excited to learn new technical skills \r\n          and ensure I am keeping my current skills sharp. I enjoy solving problems. Recently I have found myself.";
     			if (!src_url_equal(img.src, img_src_value = "./img/author.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Nikhil Malhotra");
-    			add_location(img, file$7, 2, 0, 4);
+    			attr_dev(img, "class", "svelte-zjm2e0");
+    			add_location(img, file$7, 3, 4, 33);
+    			add_location(h1, file$7, 5, 8, 117);
+    			add_location(p, file$7, 6, 8, 145);
+    			attr_dev(div0, "class", "text svelte-zjm2e0");
+    			add_location(div0, file$7, 4, 4, 89);
+    			attr_dev(div1, "class", "container svelte-zjm2e0");
+    			add_location(div1, file$7, 2, 0, 4);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, img, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, img);
+    			append_dev(div1, t0);
+    			append_dev(div1, div0);
+    			append_dev(div0, h1);
+    			append_dev(div0, t2);
+    			append_dev(div0, p);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(img);
+    			if (detaching) detach_dev(div1);
     		}
     	};
 
