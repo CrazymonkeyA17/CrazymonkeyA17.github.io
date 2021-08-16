@@ -10,15 +10,15 @@
 
 <div class="contactContent {maxMode ? "":"minMode"}">
   <div class="minrow">
-    <a class="containIcon" href="mailto:{email}"><Fa class="icon" icon={faEnvelope}/></a>
-    <a class="containIcon" href="tel:{phonenum}"><Fa class="icon" icon={faPhone}/></a>
-    <a class="containIcon" href={github}><Fa class="icon" icon={faGithub}/></a>
-    <a class="containIcon" href={linkedin}><Fa class="icon" icon={faLinkedinIn}/></a>
+    <a class="containIcon" href="mailto:{email}" target="_blank"><Fa class="icon" icon={faEnvelope}/></a>
+    <a class="containIcon" href="tel:{phonenum}" target="_blank"><Fa class="icon" icon={faPhone}/></a>
+    <a class="containIcon" href={github} target="_blank"><Fa class="icon" icon={faGithub}/></a>
+    <a class="containIcon" href={linkedin} target="_blank"><Fa class="icon" icon={faLinkedinIn}/></a>
   </div>
-  <div class="row"><a class="text" href="mailto:{email}">{email}</a><a class="containIcon" href="mailto:{email}"><Fa class="icon" icon={faEnvelope}/></a></div>
-  <div class="row"><a class="text" href="tel:{phonenum}">{phonenum}</a><a class="containIcon" href="tel:{phonenum}"><Fa class="icon" icon={faPhone}/></a></div>
-  <div class="row"><a class="text" href={github}>{github}</a><a class="containIcon" href={github}><Fa class="icon" icon={faGithub}/></a></div>
-  <div class="row"><a class="text" href={linkedin}>{linkedin}</a><a class="containIcon" href={linkedin}><Fa class="icon" icon={faLinkedinIn}/></a></div>
+  <div class="row"><a class="text" href="mailto:{email}" target="_blank">{email}</a><a class="containIcon" href="mailto:{email}" target="_blank"><Fa class="icon" icon={faEnvelope}/></a></div>
+  <div class="row"><a class="text" href="tel:{phonenum}" target="_blank">{phonenum}</a><a class="containIcon" href="tel:{phonenum}" target="_blank"><Fa class="icon" icon={faPhone}/></a></div>
+  <div class="row"><a class="text" href={github} target="_blank">{github}</a><a class="containIcon" href={github} target="_blank"><Fa class="icon" icon={faGithub}/></a></div>
+  <div class="row"><a class="text" href={linkedin} target="_blank">{linkedin}</a><a class="containIcon" href={linkedin} target="_blank"><Fa class="icon" icon={faLinkedinIn}/></a></div>
 </div>
 
 <style>
@@ -47,6 +47,7 @@
   }
   .contactContent :global(.icon) {
     color:#522e90;
+    font-size:1.5em;
   }
   .contactContent .minrow :global(.icon) {
     font-size:2em;
@@ -76,5 +77,8 @@
   .minMode .minrow {
     transform: scaleY(1);
     height:auto;
+  }
+  .text {
+    font-size: 1.5em;
   }
 </style>

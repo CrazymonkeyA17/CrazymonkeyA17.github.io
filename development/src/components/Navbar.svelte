@@ -37,7 +37,7 @@
 	}
 	ul {
 		width: 100%;
-    padding-inline-start: 5%;
+    padding-inline-start: 2.9vw;
 		display: flex;
 		flex-direction: column;
 		transition: 2s;

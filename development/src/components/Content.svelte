@@ -8,7 +8,7 @@
 
 <div class="bottom {section === "Home" ? "":"show"}">
   <Navigation bind:selection={section} topMode={true}/>
-  <div class="container">
+  <div class="blockcontainer">
     {#each navbarmenu as item}
       <ContentBlock show={section['item'] === item} text={item}/>
     {/each}
@@ -30,8 +30,9 @@
     height: 100%;
     max-height: 100vh;
   }
-  .container {
+  .blockcontainer {
     display: flex;
     flex-direction: row;
+    height: 90vh;
   }
 </style>

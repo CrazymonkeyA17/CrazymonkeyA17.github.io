@@ -1,8 +1,8 @@
 <script lang="ts">
   import About from "./content/About.svelte";
-  import Skills from "./content/Skills.svelte";
+  import Knowledge from "./content/Knowledge.svelte";
   import Current from "./content/Current.svelte";
-  import Career from "./content/Career.svelte";
+  import Experience from "./content/Experience.svelte";
   import Projects from "./content/Projects.svelte";
 
   export let text = "";
@@ -10,9 +10,9 @@
  
   const content = {
     "ABOUT":About,
-    "SKILLS":Skills,
+    "KNOWLEDGE":Knowledge,
     "CURRENT":Current,
-    "CAREER":Career,
+    "EXPERIENCE":Experience,
     "PROJECTS":Projects,
   }
 </script>
