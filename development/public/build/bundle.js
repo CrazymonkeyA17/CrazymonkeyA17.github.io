@@ -1084,7 +1084,7 @@ var app = (function () {
       {
         "name":"Python",
         "level":3,
-        "comment":"I started learning Python as I had heard a lot about it by word of mouth. This was quite a fun and straight forward language",
+        "comment":"I started learning Python as I had heard a lot about it by word of mouth. This was quite a fun and straight forward language. It definitly pushes and promotes code coding practices",
       },
       {
         "name":"Javascript",
@@ -1099,23 +1099,33 @@ var app = (function () {
       {
         "name":"AutoLISP",
         "level":4,
-        "comment":"",
+        "comment":"Why someone thought this language should exist as part of the AutoCAD suite baffles me. It is quite simple but too simple I am quite glad that there are other options as the brackets really got to me after a while of coding in the built in IDE, I got severe VBA PTSD flashbacks.",
       },
       {
-        "name":"MatLab",
+        "name":"MATLAB",
         "level":3,
-        "comment":"",
+        "comment":"Most of my exposure to this language has been in University, manufacturing doesnt tend to do vector math very often and neither do I. Otherwise I enjoyed working in this language, no crazy quirks and quite powerful",
       },
       {
         "name":"SQL",
         "level":2,
-        "comment":"",
+        "comment":"Databases have been quite touch and go for me. I've never had a project that required a heavy use of SQL so my understanding of the limitations of the technology is limited (no pun intended). I'll end up implementing some kind of highscore system on this website to learn this in more depth.",
       },
       {
         "name":"Latex",
         "level":2,
-        "comment":"",
+        "comment":"A lot of my classmates back in University were using this language for resume building and research papers. I'll admit I wasnt too confident in myself so I stuck with my trusty Word. Recently I decided why not give it a shot with my latest resumes. I have to admit it is quite fun to watch my content just dance into different formats as I switch different variables. However I am probably going to try for a web based resume now.",
       },
+      {
+        "name":"HTML",
+        "level":3,
+        "comment":"Similiar to Javascript I learned when making the mvp website. I know enough to be dangerous at this point."
+      },
+      {
+        "name":"CSS",
+        "level":3,
+        "comment":"Similiar to Javascript I learned when making the mvp website. I thought I knew enough but I'm now learning the toolsets that make css coding a bit easier."
+      }
     ];
 
     /*!
@@ -1132,10 +1142,25 @@ var app = (function () {
      * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
      * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
      */
+    var faCode = {
+      prefix: 'fas',
+      iconName: 'code',
+      icon: [640, 512, [], "f121", "M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"]
+    };
+    var faCrop = {
+      prefix: 'fas',
+      iconName: 'crop',
+      icon: [512, 512, [], "f125", "M488 352h-40V109.25l59.31-59.31c6.25-6.25 6.25-16.38 0-22.63L484.69 4.69c-6.25-6.25-16.38-6.25-22.63 0L402.75 64H192v96h114.75L160 306.75V24c0-13.26-10.75-24-24-24H88C74.75 0 64 10.74 64 24v40H24C10.75 64 0 74.74 0 88v48c0 13.25 10.75 24 24 24h40v264c0 13.25 10.75 24 24 24h232v-96H205.25L352 205.25V488c0 13.25 10.75 24 24 24h48c13.25 0 24-10.75 24-24v-40h40c13.25 0 24-10.75 24-24v-48c0-13.26-10.75-24-24-24z"]
+    };
     var faPhone = {
       prefix: 'fas',
       iconName: 'phone',
       icon: [512, 512, [], "f095", "M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"]
+    };
+    var faTools = {
+      prefix: 'fas',
+      iconName: 'tools',
+      icon: [512, 512, [], "f7d9", "M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z"]
     };
 
     /*!
@@ -1833,9 +1858,9 @@ var app = (function () {
     }
 
     function create_fragment$b(ctx) {
-    	let div;
+    	let nav;
     	let ul;
-    	let div_class_value;
+    	let nav_class_value;
     	let current;
     	let each_value = navbarmenu;
     	validate_each_argument(each_value);
@@ -1851,7 +1876,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			nav = element("nav");
     			ul = element("ul");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -1860,15 +1885,15 @@ var app = (function () {
 
     			attr_dev(ul, "class", "svelte-2h81bv");
     			add_location(ul, file$b, 10, 2, 274);
-    			attr_dev(div, "class", div_class_value = "right " + (/*navtop*/ ctx[0] ? "top" : "") + " svelte-2h81bv");
-    			add_location(div, file$b, 9, 0, 231);
+    			attr_dev(nav, "class", nav_class_value = "right " + (/*navtop*/ ctx[0] ? "top" : "") + " svelte-2h81bv");
+    			add_location(nav, file$b, 9, 0, 231);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, ul);
+    			insert_dev(target, nav, anchor);
+    			append_dev(nav, ul);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(ul, null);
@@ -1905,8 +1930,8 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty & /*navtop*/ 1 && div_class_value !== (div_class_value = "right " + (/*navtop*/ ctx[0] ? "top" : "") + " svelte-2h81bv")) {
-    				attr_dev(div, "class", div_class_value);
+    			if (!current || dirty & /*navtop*/ 1 && nav_class_value !== (nav_class_value = "right " + (/*navtop*/ ctx[0] ? "top" : "") + " svelte-2h81bv")) {
+    				attr_dev(nav, "class", nav_class_value);
     			}
     		},
     		i: function intro(local) {
@@ -1928,7 +1953,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(nav);
     			destroy_each(each_blocks, detaching);
     		}
     	};
@@ -2374,53 +2399,53 @@ var app = (function () {
     			attr_dev(rect, "height", /*squareDim*/ ctx[6]);
 
     			attr_dev(rect, "fill", rect_fill_value = /*notch*/ ctx[0] > 1
-    			? /*fillColor*/ ctx[19] + "80"
+    			? /*fillColorOne*/ ctx[20]
     			: "transparent");
 
-    			attr_dev(rect, "stroke", /*innerBorder*/ ctx[20]);
+    			attr_dev(rect, "stroke", /*innerBorder*/ ctx[24]);
     			attr_dev(rect, "stroke-width", "5");
-    			add_location(rect, file$8, 81, 2, 2353);
+    			add_location(rect, file$8, 85, 2, 2492);
     			attr_dev(path0, "d", "\r\n    M " + /*shapeTwoX*/ ctx[9] + " " + /*shapeTwoY*/ ctx[10] + " \r\n    L " + (/*shapeTwoX*/ ctx[9] + /*shapeTwoSlantWidth*/ ctx[11]) + " " + (/*shapeTwoY*/ ctx[10] - /*shapeTwoSlantHeight*/ ctx[12]) + " \r\n    V " + (/*shapeTwoY*/ ctx[10] - /*shapeTwoSlantHeight*/ ctx[12] + /*segheight*/ ctx[4]) + " \r\n    L " + /*shapeTwoX*/ ctx[9] + " " + (/*shapeTwoY*/ ctx[10] + /*segheight*/ ctx[4]) + " z");
 
     			attr_dev(path0, "fill", path0_fill_value = /*notch*/ ctx[0] > 1
-    			? /*fillColor*/ ctx[19] + "90"
+    			? /*fillColorTwo*/ ctx[21]
     			: "transparent");
 
-    			attr_dev(path0, "stroke", /*innerBorder*/ ctx[20]);
+    			attr_dev(path0, "stroke", /*innerBorder*/ ctx[24]);
     			attr_dev(path0, "stroke-width", "5");
-    			add_location(path0, file$8, 82, 2, 2521);
+    			add_location(path0, file$8, 86, 2, 2658);
     			attr_dev(path1, "d", "\r\n    M " + /*shapeThreeX*/ ctx[13] + " " + /*shapeThreeY*/ ctx[14] + " \r\n    L " + (/*shapeThreeX*/ ctx[13] + /*shapeTwoSlantWidth*/ ctx[11]) + " " + (/*shapeThreeY*/ ctx[14] - /*shapeTwoSlantHeight*/ ctx[12]) + " \r\n    V " + (/*shapeThreeY*/ ctx[14] - /*shapeTwoSlantHeight*/ ctx[12] + /*segheight*/ ctx[4]) + " \r\n    L " + /*shapeThreeX*/ ctx[13] + " " + (/*shapeThreeY*/ ctx[14] + /*segheight*/ ctx[4]) + " z");
 
     			attr_dev(path1, "fill", path1_fill_value = /*notch*/ ctx[0] > 2
-    			? /*fillColor*/ ctx[19] + "aa"
+    			? /*fillColorThree*/ ctx[19]
     			: "transparent");
 
-    			attr_dev(path1, "stroke", /*innerBorder*/ ctx[20]);
+    			attr_dev(path1, "stroke", /*innerBorder*/ ctx[24]);
     			attr_dev(path1, "stroke-width", "5");
-    			add_location(path1, file$8, 89, 2, 2824);
+    			add_location(path1, file$8, 93, 2, 2959);
     			attr_dev(path2, "d", "\r\n    M " + /*shapeFourX*/ ctx[15] + " " + /*shapeFourY*/ ctx[16] + " \r\n    H " + (/*shapeFourX*/ ctx[15] + /*segwidth*/ ctx[3]) + " \r\n    V " + (/*shapeFourY*/ ctx[16] + /*segheight*/ ctx[4]) + " \r\n    H " + /*shapeFourX*/ ctx[15] + " z");
 
     			attr_dev(path2, "fill", path2_fill_value = /*notch*/ ctx[0] > 3
-    			? /*fillColor*/ ctx[19] + "dd"
+    			? /*fillColorFour*/ ctx[22]
     			: "transparent");
 
-    			attr_dev(path2, "stroke", /*innerBorder*/ ctx[20]);
+    			attr_dev(path2, "stroke", /*innerBorder*/ ctx[24]);
     			attr_dev(path2, "stroke-width", "5");
-    			add_location(path2, file$8, 96, 2, 3142);
+    			add_location(path2, file$8, 100, 2, 3277);
     			attr_dev(polygon, "points", generateStar(/*shapeFiveX*/ ctx[17], /*shapeFiveY*/ ctx[18], /*segheight*/ ctx[4], /*segheight*/ ctx[4] / 2));
     			attr_dev(polygon, "stroke", "white");
 
     			attr_dev(polygon, "fill", polygon_fill_value = /*notch*/ ctx[0] > 4
-    			? /*fillColor*/ ctx[19]
+    			? /*fillColorFive*/ ctx[23]
     			: "transparent");
 
     			attr_dev(polygon, "stroke-width", /*gap*/ ctx[5]);
-    			add_location(polygon, file$8, 103, 2, 3367);
+    			add_location(polygon, file$8, 107, 2, 3501);
     			attr_dev(path3, "d", "\r\n    M " + (/*shapeOneX*/ ctx[7] - /*gap*/ ctx[5]) + " " + (/*shapeOneY*/ ctx[8] - /*gap*/ ctx[5]) + " \r\n    H " + (/*squareDim*/ ctx[6] + /*gap*/ ctx[5] * 6) + " \r\n    V " + (/*shapeTwoY*/ ctx[10] - /*gap*/ ctx[5]) + " \r\n    L " + (/*shapeTwoX*/ ctx[9] + /*shapeTwoSlantWidth*/ ctx[11] + /*gap*/ ctx[5]) + " " + (/*shapeTwoY*/ ctx[10] - /*shapeTwoSlantHeight*/ ctx[12] - /*gap*/ ctx[5]) + " \r\n    V " + (/*shapeTwoY*/ ctx[10] - /*shapeTwoSlantHeight*/ ctx[12] + /*segheight*/ ctx[4] - /*gap*/ ctx[5]) + "\r\n    L " + /*shapeFourX*/ ctx[15] + " " + (/*shapeFourY*/ ctx[16] - /*gap*/ ctx[5]) + "\r\n    H " + (/*shapeFourX*/ ctx[15] + /*segwidth*/ ctx[3] + /*gap*/ ctx[5]) + "\r\n    V " + (/*shapeFourY*/ ctx[16] + /*segheight*/ ctx[4] + /*gap*/ ctx[5]) + "\r\n    H " + /*shapeFourX*/ ctx[15] + "\r\n    L " + (/*shapeThreeX*/ ctx[13] - /*gap*/ ctx[5]) + " " + (/*shapeThreeY*/ ctx[14] + /*segheight*/ ctx[4] + /*gap*/ ctx[5]) + "\r\n    V " + (/*shapeThreeY*/ ctx[14] + /*gap*/ ctx[5]) + "\r\n    L " + (/*shapeTwoX*/ ctx[9] + /*gap*/ ctx[5]) + " " + (/*shapeTwoY*/ ctx[10] + /*segheight*/ ctx[4] + /*gap*/ ctx[5]) + "\r\n    V " + (/*shapeOneY*/ ctx[8] + /*squareDim*/ ctx[6] + /*gap*/ ctx[5]) + "\r\n    H " + (/*shapeOneX*/ ctx[7] - /*gap*/ ctx[5]) + "\r\n    z");
     			attr_dev(path3, "fill", "transparent");
-    			attr_dev(path3, "stroke", /*outerBorder*/ ctx[21]);
+    			attr_dev(path3, "stroke", /*outerBorder*/ ctx[25]);
     			attr_dev(path3, "stroke-width", "5");
-    			add_location(path3, file$8, 105, 2, 3527);
+    			add_location(path3, file$8, 109, 2, 3665);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "xmlns:xlink", "http://www.w3.org/1999/xlink");
     			attr_dev(svg, "version", "1.1");
@@ -2428,7 +2453,7 @@ var app = (function () {
     			attr_dev(svg, "height", /*canvasheight*/ ctx[2]);
     			attr_dev(svg, "viewBox", "0 0 " + /*canvaswidth*/ ctx[1] + " " + /*canvasheight*/ ctx[2]);
     			attr_dev(svg, "class", "svelte-1qroolc");
-    			add_location(svg, file$8, 79, 0, 2159);
+    			add_location(svg, file$8, 83, 0, 2298);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2444,31 +2469,31 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*notch*/ 1 && rect_fill_value !== (rect_fill_value = /*notch*/ ctx[0] > 1
-    			? /*fillColor*/ ctx[19] + "80"
+    			? /*fillColorOne*/ ctx[20]
     			: "transparent")) {
     				attr_dev(rect, "fill", rect_fill_value);
     			}
 
     			if (dirty & /*notch*/ 1 && path0_fill_value !== (path0_fill_value = /*notch*/ ctx[0] > 1
-    			? /*fillColor*/ ctx[19] + "90"
+    			? /*fillColorTwo*/ ctx[21]
     			: "transparent")) {
     				attr_dev(path0, "fill", path0_fill_value);
     			}
 
     			if (dirty & /*notch*/ 1 && path1_fill_value !== (path1_fill_value = /*notch*/ ctx[0] > 2
-    			? /*fillColor*/ ctx[19] + "aa"
+    			? /*fillColorThree*/ ctx[19]
     			: "transparent")) {
     				attr_dev(path1, "fill", path1_fill_value);
     			}
 
     			if (dirty & /*notch*/ 1 && path2_fill_value !== (path2_fill_value = /*notch*/ ctx[0] > 3
-    			? /*fillColor*/ ctx[19] + "dd"
+    			? /*fillColorFour*/ ctx[22]
     			: "transparent")) {
     				attr_dev(path2, "fill", path2_fill_value);
     			}
 
     			if (dirty & /*notch*/ 1 && polygon_fill_value !== (polygon_fill_value = /*notch*/ ctx[0] > 4
-    			? /*fillColor*/ ctx[19]
+    			? /*fillColorFive*/ ctx[23]
     			: "transparent")) {
     				attr_dev(polygon, "fill", polygon_fill_value);
     			}
@@ -2562,7 +2587,11 @@ var app = (function () {
     	let shapeFourY = shapeTwoY;
     	let shapeFiveX = shapeFourX + segwidth * 1.35;
     	let shapeFiveY = mid;
-    	let fillColor = "#522e90";
+    	let fillColorThree = "#522e90";
+    	let fillColorOne = "#8B6EBC";
+    	let fillColorTwo = "#6847A0";
+    	let fillColorFour = "#3D1B77";
+    	let fillColorFive = "#290A5D";
     	let innerBorder = "#522e9080";
     	let outerBorder = "#00000080";
     	const writable_props = ['notch'];
@@ -2600,7 +2629,11 @@ var app = (function () {
     		shapeFourY,
     		shapeFiveX,
     		shapeFiveY,
-    		fillColor,
+    		fillColorThree,
+    		fillColorOne,
+    		fillColorTwo,
+    		fillColorFour,
+    		fillColorFive,
     		innerBorder,
     		outerBorder,
     		toRadians,
@@ -2633,9 +2666,13 @@ var app = (function () {
     		if ('shapeFourY' in $$props) $$invalidate(16, shapeFourY = $$props.shapeFourY);
     		if ('shapeFiveX' in $$props) $$invalidate(17, shapeFiveX = $$props.shapeFiveX);
     		if ('shapeFiveY' in $$props) $$invalidate(18, shapeFiveY = $$props.shapeFiveY);
-    		if ('fillColor' in $$props) $$invalidate(19, fillColor = $$props.fillColor);
-    		if ('innerBorder' in $$props) $$invalidate(20, innerBorder = $$props.innerBorder);
-    		if ('outerBorder' in $$props) $$invalidate(21, outerBorder = $$props.outerBorder);
+    		if ('fillColorThree' in $$props) $$invalidate(19, fillColorThree = $$props.fillColorThree);
+    		if ('fillColorOne' in $$props) $$invalidate(20, fillColorOne = $$props.fillColorOne);
+    		if ('fillColorTwo' in $$props) $$invalidate(21, fillColorTwo = $$props.fillColorTwo);
+    		if ('fillColorFour' in $$props) $$invalidate(22, fillColorFour = $$props.fillColorFour);
+    		if ('fillColorFive' in $$props) $$invalidate(23, fillColorFive = $$props.fillColorFive);
+    		if ('innerBorder' in $$props) $$invalidate(24, innerBorder = $$props.innerBorder);
+    		if ('outerBorder' in $$props) $$invalidate(25, outerBorder = $$props.outerBorder);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -2662,7 +2699,11 @@ var app = (function () {
     		shapeFourY,
     		shapeFiveX,
     		shapeFiveY,
-    		fillColor,
+    		fillColorThree,
+    		fillColorOne,
+    		fillColorTwo,
+    		fillColorFour,
+    		fillColorFive,
     		innerBorder,
     		outerBorder
     	];
@@ -2694,14 +2735,18 @@ var app = (function () {
     const file$7 = "src\\components\\content\\LangBlock.svelte";
 
     function create_fragment$7(ctx) {
-    	let div2;
+    	let div3;
+    	let div1;
+    	let img;
+    	let img_src_value;
+    	let t0;
     	let div0;
     	let h3;
-    	let t0;
-    	let progressbar;
     	let t1;
-    	let div1;
+    	let progressbar;
     	let t2;
+    	let div2;
+    	let t3;
     	let current;
 
     	progressbar = new ProgressBar({
@@ -2711,41 +2756,57 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div2 = element("div");
+    			div3 = element("div");
+    			div1 = element("div");
+    			img = element("img");
+    			t0 = space();
     			div0 = element("div");
     			h3 = element("h3");
-    			t0 = text(/*name*/ ctx[0]);
+    			t1 = text(/*name*/ ctx[0]);
     			create_component(progressbar.$$.fragment);
-    			t1 = space();
-    			div1 = element("div");
-    			t2 = text(/*comment*/ ctx[2]);
-    			add_location(h3, file$7, 9, 24, 223);
+    			t2 = space();
+    			div2 = element("div");
+    			t3 = text(/*comment*/ ctx[2]);
+    			if (!src_url_equal(img.src, img_src_value = /*imgsrc*/ ctx[3])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			add_location(img, file$7, 11, 4, 258);
+    			add_location(h3, file$7, 12, 26, 311);
     			attr_dev(div0, "class", "progress svelte-1cwv173");
-    			add_location(div0, file$7, 9, 2, 201);
-    			add_location(div1, file$7, 10, 2, 276);
-    			attr_dev(div2, "class", "langblock");
-    			add_location(div2, file$7, 8, 0, 174);
+    			add_location(div0, file$7, 12, 4, 289);
+    			attr_dev(div1, "class", "cardheader");
+    			add_location(div1, file$7, 10, 2, 228);
+    			attr_dev(div2, "class", "description");
+    			add_location(div2, file$7, 15, 2, 378);
+    			attr_dev(div3, "class", "langblock");
+    			add_location(div3, file$7, 9, 0, 201);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, div0);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div1);
+    			append_dev(div1, img);
+    			append_dev(div1, t0);
+    			append_dev(div1, div0);
     			append_dev(div0, h3);
-    			append_dev(h3, t0);
+    			append_dev(h3, t1);
     			mount_component(progressbar, div0, null);
-    			append_dev(div2, t1);
-    			append_dev(div2, div1);
-    			append_dev(div1, t2);
+    			append_dev(div3, t2);
+    			append_dev(div3, div2);
+    			append_dev(div2, t3);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (!current || dirty & /*name*/ 1) set_data_dev(t0, /*name*/ ctx[0]);
+    			if (!current || dirty & /*imgsrc*/ 8 && !src_url_equal(img.src, img_src_value = /*imgsrc*/ ctx[3])) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+
+    			if (!current || dirty & /*name*/ 1) set_data_dev(t1, /*name*/ ctx[0]);
     			const progressbar_changes = {};
     			if (dirty & /*level*/ 2) progressbar_changes.notch = /*level*/ ctx[1];
     			progressbar.$set(progressbar_changes);
-    			if (!current || dirty & /*comment*/ 4) set_data_dev(t2, /*comment*/ ctx[2]);
+    			if (!current || dirty & /*comment*/ 4) set_data_dev(t3, /*comment*/ ctx[2]);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -2757,7 +2818,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(div3);
     			destroy_component(progressbar);
     		}
     	};
@@ -2779,7 +2840,8 @@ var app = (function () {
     	let { name = "Language" } = $$props;
     	let { level = 1 } = $$props;
     	let { comment = "Some Comment" } = $$props;
-    	const writable_props = ['name', 'level', 'comment'];
+    	let { imgsrc = "" } = $$props;
+    	const writable_props = ['name', 'level', 'comment', 'imgsrc'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<LangBlock> was created with unknown prop '${key}'`);
@@ -2789,27 +2851,35 @@ var app = (function () {
     		if ('name' in $$props) $$invalidate(0, name = $$props.name);
     		if ('level' in $$props) $$invalidate(1, level = $$props.level);
     		if ('comment' in $$props) $$invalidate(2, comment = $$props.comment);
+    		if ('imgsrc' in $$props) $$invalidate(3, imgsrc = $$props.imgsrc);
     	};
 
-    	$$self.$capture_state = () => ({ ProgressBar, name, level, comment });
+    	$$self.$capture_state = () => ({
+    		ProgressBar,
+    		name,
+    		level,
+    		comment,
+    		imgsrc
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('name' in $$props) $$invalidate(0, name = $$props.name);
     		if ('level' in $$props) $$invalidate(1, level = $$props.level);
     		if ('comment' in $$props) $$invalidate(2, comment = $$props.comment);
+    		if ('imgsrc' in $$props) $$invalidate(3, imgsrc = $$props.imgsrc);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [name, level, comment];
+    	return [name, level, comment, imgsrc];
     }
 
     class LangBlock extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$7, create_fragment$7, safe_not_equal, { name: 0, level: 1, comment: 2 });
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, { name: 0, level: 1, comment: 2, imgsrc: 3 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -2842,6 +2912,14 @@ var app = (function () {
     	set comment(value) {
     		throw new Error("<LangBlock>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get imgsrc() {
+    		throw new Error("<LangBlock>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set imgsrc(value) {
+    		throw new Error("<LangBlock>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src\components\content\Knowledge.svelte generated by Svelte v3.42.1 */
@@ -2849,20 +2927,20 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[0] = list[i];
+    	child_ctx[2] = list[i];
     	return child_ctx;
     }
 
-    // (11:2) {#each languages as language}
+    // (27:4) {#each languages as language}
     function create_each_block$1(ctx) {
     	let langblock;
     	let current;
 
     	langblock = new LangBlock({
     			props: {
-    				name: /*language*/ ctx[0].name,
-    				level: /*language*/ ctx[0].level,
-    				comment: /*language*/ ctx[0].comment
+    				name: /*language*/ ctx[2].name,
+    				level: /*language*/ ctx[2].level,
+    				comment: /*language*/ ctx[2].comment
     			},
     			$$inline: true
     		});
@@ -2894,7 +2972,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(11:2) {#each languages as language}",
+    		source: "(27:4) {#each languages as language}",
     		ctx
     	});
 
@@ -2902,13 +2980,46 @@ var app = (function () {
     }
 
     function create_fragment$6(ctx) {
-    	let div1;
+    	let div9;
     	let div0;
-    	let h1;
-    	let t1;
-    	let p;
-    	let t3;
+    	let fa0;
+    	let t0;
+    	let div2;
+    	let div1;
+    	let h10;
+    	let t2;
+    	let p0;
+    	let t4;
+    	let div2_class_value;
+    	let t5;
+    	let div3;
+    	let fa1;
+    	let t6;
+    	let div5;
+    	let div4;
+    	let h11;
+    	let t8;
+    	let p1;
+    	let div5_class_value;
+    	let t10;
+    	let div6;
+    	let fa2;
+    	let t11;
+    	let div8;
+    	let div7;
+    	let h12;
+    	let t13;
+    	let p2;
+    	let div8_class_value;
     	let current;
+    	let mounted;
+    	let dispose;
+
+    	fa0 = new Fa({
+    			props: { class: "icon", icon: faCode },
+    			$$inline: true
+    		});
+
     	let each_value = languages;
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -2921,44 +3032,132 @@ var app = (function () {
     		each_blocks[i] = null;
     	});
 
+    	fa1 = new Fa({
+    			props: { class: "icon", icon: faTools },
+    			$$inline: true
+    		});
+
+    	fa2 = new Fa({
+    			props: { class: "icon", icon: faCrop },
+    			$$inline: true
+    		});
+
     	const block = {
     		c: function create() {
-    			div1 = element("div");
+    			div9 = element("div");
     			div0 = element("div");
-    			h1 = element("h1");
-    			h1.textContent = "Skills";
-    			t1 = space();
-    			p = element("p");
-    			p.textContent = "Just going over what I have learned so far and how much I know.";
-    			t3 = space();
+    			create_component(fa0.$$.fragment);
+    			t0 = space();
+    			div2 = element("div");
+    			div1 = element("div");
+    			h10 = element("h1");
+    			h10.textContent = "Languages";
+    			t2 = space();
+    			p0 = element("p");
+    			p0.textContent = "All the languages that I know. Maybe....";
+    			t4 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			add_location(h1, file$6, 7, 6, 183);
-    			add_location(p, file$6, 8, 6, 206);
-    			attr_dev(div0, "class", "skillstext svelte-3prhz5");
-    			add_location(div0, file$6, 6, 2, 151);
-    			attr_dev(div1, "class", "skillscontainer svelte-3prhz5");
-    			add_location(div1, file$6, 5, 0, 118);
+    			t5 = space();
+    			div3 = element("div");
+    			create_component(fa1.$$.fragment);
+    			t6 = space();
+    			div5 = element("div");
+    			div4 = element("div");
+    			h11 = element("h1");
+    			h11.textContent = "Languages";
+    			t8 = space();
+    			p1 = element("p");
+    			p1.textContent = "All the languages that I know. Maybe....";
+    			t10 = space();
+    			div6 = element("div");
+    			create_component(fa2.$$.fragment);
+    			t11 = space();
+    			div8 = element("div");
+    			div7 = element("div");
+    			h12 = element("h1");
+    			h12.textContent = "Languages";
+    			t13 = space();
+    			p2 = element("p");
+    			p2.textContent = "All the languages that I know. Maybe....";
+    			attr_dev(div0, "class", "titlebanner");
+    			add_location(div0, file$6, 18, 2, 421);
+    			add_location(h10, file$6, 23, 6, 625);
+    			add_location(p0, file$6, 24, 6, 651);
+    			attr_dev(div1, "class", "titleblock");
+    			add_location(div1, file$6, 22, 4, 593);
+    			attr_dev(div2, "class", div2_class_value = "languagecontainer " + (/*section*/ ctx[0] === 1 ? "show" : "hide") + " svelte-14rod7f");
+    			add_location(div2, file$6, 21, 2, 526);
+    			attr_dev(div3, "class", "titlebanner");
+    			add_location(div3, file$6, 30, 2, 863);
+    			add_location(h11, file$6, 35, 6, 1065);
+    			add_location(p1, file$6, 36, 6, 1091);
+    			attr_dev(div4, "class", "titleblock");
+    			add_location(div4, file$6, 34, 4, 1033);
+    			attr_dev(div5, "class", div5_class_value = "toolscontainer " + (/*section*/ ctx[0] === 2 ? "show" : "hide") + " svelte-14rod7f");
+    			add_location(div5, file$6, 33, 2, 969);
+    			attr_dev(div6, "class", "titlebanner");
+    			add_location(div6, file$6, 40, 2, 1170);
+    			add_location(h12, file$6, 45, 6, 1376);
+    			add_location(p2, file$6, 46, 6, 1402);
+    			attr_dev(div7, "class", "titleblock");
+    			add_location(div7, file$6, 44, 4, 1344);
+    			attr_dev(div8, "class", div8_class_value = "frameworkscontainer " + (/*section*/ ctx[0] === 3 ? "show" : "hide") + " svelte-14rod7f");
+    			add_location(div8, file$6, 43, 2, 1275);
+    			attr_dev(div9, "class", "knowledgecontainer");
+    			add_location(div9, file$6, 17, 0, 385);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, div0);
-    			append_dev(div0, h1);
-    			append_dev(div0, t1);
-    			append_dev(div0, p);
-    			append_dev(div1, t3);
+    			insert_dev(target, div9, anchor);
+    			append_dev(div9, div0);
+    			mount_component(fa0, div0, null);
+    			append_dev(div9, t0);
+    			append_dev(div9, div2);
+    			append_dev(div2, div1);
+    			append_dev(div1, h10);
+    			append_dev(div1, t2);
+    			append_dev(div1, p0);
+    			append_dev(div2, t4);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(div1, null);
+    				each_blocks[i].m(div2, null);
     			}
 
+    			append_dev(div9, t5);
+    			append_dev(div9, div3);
+    			mount_component(fa1, div3, null);
+    			append_dev(div9, t6);
+    			append_dev(div9, div5);
+    			append_dev(div5, div4);
+    			append_dev(div4, h11);
+    			append_dev(div4, t8);
+    			append_dev(div4, p1);
+    			append_dev(div9, t10);
+    			append_dev(div9, div6);
+    			mount_component(fa2, div6, null);
+    			append_dev(div9, t11);
+    			append_dev(div9, div8);
+    			append_dev(div8, div7);
+    			append_dev(div7, h12);
+    			append_dev(div7, t13);
+    			append_dev(div7, p2);
     			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(div0, "click", /*toggleSection*/ ctx[1](1), false, false, false),
+    					listen_dev(div3, "click", /*toggleSection*/ ctx[1](2), false, false, false),
+    					listen_dev(div6, "click", /*toggleSection*/ ctx[1](3), false, false, false)
+    				];
+
+    				mounted = true;
+    			}
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*languages*/ 0) {
@@ -2976,7 +3175,7 @@ var app = (function () {
     						each_blocks[i] = create_each_block$1(child_ctx);
     						each_blocks[i].c();
     						transition_in(each_blocks[i], 1);
-    						each_blocks[i].m(div1, null);
+    						each_blocks[i].m(div2, null);
     					}
     				}
 
@@ -2988,28 +3187,51 @@ var app = (function () {
 
     				check_outros();
     			}
+
+    			if (!current || dirty & /*section*/ 1 && div2_class_value !== (div2_class_value = "languagecontainer " + (/*section*/ ctx[0] === 1 ? "show" : "hide") + " svelte-14rod7f")) {
+    				attr_dev(div2, "class", div2_class_value);
+    			}
+
+    			if (!current || dirty & /*section*/ 1 && div5_class_value !== (div5_class_value = "toolscontainer " + (/*section*/ ctx[0] === 2 ? "show" : "hide") + " svelte-14rod7f")) {
+    				attr_dev(div5, "class", div5_class_value);
+    			}
+
+    			if (!current || dirty & /*section*/ 1 && div8_class_value !== (div8_class_value = "frameworkscontainer " + (/*section*/ ctx[0] === 3 ? "show" : "hide") + " svelte-14rod7f")) {
+    				attr_dev(div8, "class", div8_class_value);
+    			}
     		},
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(fa0.$$.fragment, local);
 
     			for (let i = 0; i < each_value.length; i += 1) {
     				transition_in(each_blocks[i]);
     			}
 
+    			transition_in(fa1.$$.fragment, local);
+    			transition_in(fa2.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(fa0.$$.fragment, local);
     			each_blocks = each_blocks.filter(Boolean);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				transition_out(each_blocks[i]);
     			}
 
+    			transition_out(fa1.$$.fragment, local);
+    			transition_out(fa2.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(div9);
+    			destroy_component(fa0);
     			destroy_each(each_blocks, detaching);
+    			destroy_component(fa1);
+    			destroy_component(fa2);
+    			mounted = false;
+    			run_all(dispose);
     		}
     	};
 
@@ -3027,14 +3249,42 @@ var app = (function () {
     function instance$6($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Knowledge', slots, []);
+    	let section = 0;
+
+    	const toggleSection = val => {
+    		if (val === section) {
+    			$$invalidate(0, section = 0);
+    		} else {
+    			$$invalidate(0, section = val);
+    		}
+    	};
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Knowledge> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ LangBlock, languages });
-    	return [];
+    	$$self.$capture_state = () => ({
+    		Fa,
+    		LangBlock,
+    		languages,
+    		faCrop,
+    		faTools,
+    		faCode,
+    		section,
+    		toggleSection
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('section' in $$props) $$invalidate(0, section = $$props.section);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [section, toggleSection];
     }
 
     class Knowledge extends SvelteComponentDev {

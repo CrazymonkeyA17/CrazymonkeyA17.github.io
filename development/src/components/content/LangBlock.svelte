@@ -4,11 +4,16 @@
   export let name = "Language";
   export let level = 1;
   export let comment = "Some Comment";
+  export let imgsrc = "";
 </script>
 
 <div class="langblock">
-  <div class="progress"><h3>{name}</h3><ProgressBar notch={level}/></div>
-  <div>
+  <div class="cardheader">
+    <img src={imgsrc} alt="">
+    <div class="progress"><h3>{name}</h3><ProgressBar notch={level}/></div>
+  </div>
+  
+  <div class="description">
     {comment}
   </div>
 </div>

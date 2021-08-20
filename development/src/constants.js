@@ -15,7 +15,7 @@ export const languages = [
   {
     "name":"Python",
     "level":3,
-    "comment":"I started learning Python as I had heard a lot about it by word of mouth. This was quite a fun and straight forward language",
+    "comment":"I started learning Python as I had heard a lot about it by word of mouth. This was quite a fun and straight forward language. It definitly pushes and promotes code coding practices",
   },
   {
     "name":"Javascript",
@@ -30,21 +30,31 @@ export const languages = [
   {
     "name":"AutoLISP",
     "level":4,
-    "comment":"",
+    "comment":"Why someone thought this language should exist as part of the AutoCAD suite baffles me. It is quite simple but too simple I am quite glad that there are other options as the brackets really got to me after a while of coding in the built in IDE, I got severe VBA PTSD flashbacks.",
   },
   {
-    "name":"MatLab",
+    "name":"MATLAB",
     "level":3,
-    "comment":"",
+    "comment":"Most of my exposure to this language has been in University, manufacturing doesnt tend to do vector math very often and neither do I. Otherwise I enjoyed working in this language, no crazy quirks and quite powerful",
   },
   {
     "name":"SQL",
     "level":2,
-    "comment":"",
+    "comment":"Databases have been quite touch and go for me. I've never had a project that required a heavy use of SQL so my understanding of the limitations of the technology is limited (no pun intended). I'll end up implementing some kind of highscore system on this website to learn this in more depth.",
   },
   {
     "name":"Latex",
     "level":2,
-    "comment":"",
+    "comment":"A lot of my classmates back in University were using this language for resume building and research papers. I'll admit I wasnt too confident in myself so I stuck with my trusty Word. Recently I decided why not give it a shot with my latest resumes. I have to admit it is quite fun to watch my content just dance into different formats as I switch different variables. However I am probably going to try for a web based resume now.",
   },
+  {
+    "name":"HTML",
+    "level":3,
+    "comment":"Similiar to Javascript I learned when making the mvp website. I know enough to be dangerous at this point."
+  },
+  {
+    "name":"CSS",
+    "level":3,
+    "comment":"Similiar to Javascript I learned when making the mvp website. I thought I knew enough but I'm now learning the toolsets that make css coding a bit easier."
+  }
 ];

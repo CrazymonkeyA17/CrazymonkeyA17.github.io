@@ -10,7 +10,7 @@
 	}
 </script>
 
-<div class="right {navtop ? "top":""}">
+<nav class="right {navtop ? "top":""}">
   <ul>
     {#each navbarmenu as item}
 			<li>
@@ -18,7 +18,7 @@
 			</li>
 		{/each}
   </ul>
-</div>
+</nav>
 
 <style>
   .right {

@@ -31,7 +31,11 @@
   let shapeFiveX = shapeFourX + segwidth*1.35;
   let shapeFiveY = mid;
 
-  let fillColor = "#522e90";
+  let fillColorThree = "#522e90";
+  let fillColorOne = "#8B6EBC";
+  let fillColorTwo = "#6847A0";
+  let fillColorFour = "#3D1B77";
+  let fillColorFive = "#290A5D";
   let innerBorder = "#522e9080";
   let outerBorder = "#00000080";
 
@@ -79,29 +83,29 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="{canvaswidth}" height="{canvasheight}" viewBox="0 0 {canvaswidth} {canvasheight}">
   
-  <rect x="{shapeOneX}" y="{shapeOneY}" width="{squareDim}" height="{squareDim}" fill={notch>1?(fillColor+"80"):"transparent"} stroke={innerBorder} stroke-width="5"/>
+  <rect x="{shapeOneX}" y="{shapeOneY}" width="{squareDim}" height="{squareDim}" fill={notch>1?(fillColorOne):"transparent"} stroke={innerBorder} stroke-width="5"/>
   <path d="
     M {shapeTwoX} {shapeTwoY} 
     L {shapeTwoX+shapeTwoSlantWidth} {shapeTwoY-shapeTwoSlantHeight} 
     V {shapeTwoY-shapeTwoSlantHeight+segheight} 
     L {shapeTwoX} {shapeTwoY+segheight} z"
-    fill={notch>1?(fillColor+"90"):"transparent"} stroke={innerBorder} stroke-width="5"/>
+    fill={notch>1?(fillColorTwo):"transparent"} stroke={innerBorder} stroke-width="5"/>
 
   <path d="
     M {shapeThreeX} {shapeThreeY} 
     L {shapeThreeX+shapeTwoSlantWidth} {shapeThreeY-shapeTwoSlantHeight} 
     V {shapeThreeY-shapeTwoSlantHeight+segheight} 
     L {shapeThreeX} {shapeThreeY+segheight} z" 
-    fill={notch>2?(fillColor+"aa"):"transparent"} stroke={innerBorder} stroke-width="5"/>
+    fill={notch>2?(fillColorThree):"transparent"} stroke={innerBorder} stroke-width="5"/>
 
   <path d="
     M {shapeFourX} {shapeFourY} 
     H {shapeFourX+segwidth} 
     V {shapeFourY+segheight} 
     H {shapeFourX} z" 
-    fill={notch>3?(fillColor+"dd"):"transparent"} stroke={innerBorder} stroke-width="5"/>
+    fill={notch>3?(fillColorFour):"transparent"} stroke={innerBorder} stroke-width="5"/>
 
-  <polygon points={generateStar(shapeFiveX,shapeFiveY,segheight,segheight/2)} stroke="white" fill={notch>4?fillColor:"transparent"} stroke-width="{gap}"/>
+  <polygon points={generateStar(shapeFiveX,shapeFiveY,segheight,segheight/2)} stroke="white" fill={notch>4?fillColorFive:"transparent"} stroke-width="{gap}"/>
   
   <path d="
     M {shapeOneX-gap} {shapeOneY-gap} 
