@@ -1,3 +1,5 @@
+export const maincolor = '#522e90';
+
 export const name = "Nikhil Malhotra";
 export const email = "nikhil.malhotra42@gmail.com";
 export const phonenum = "519-731-3123";

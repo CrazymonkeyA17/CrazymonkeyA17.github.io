@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { navbarmenu } from "../constants";
+  import { navbarmenu, maincolor } from "../constants";
 	import Button from "./Button.svelte";
 
 	export let navtop = false;
@@ -10,7 +10,7 @@
 	}
 </script>
 
-<nav class="right {navtop ? "top":""}">
+<nav class="right {navtop ? "top":""}" style="--theme-color: {maincolor}">
   <ul>
     {#each navbarmenu as item}
 			<li>
@@ -22,7 +22,7 @@
 
 <style>
   .right {
-		background-color: #522e90;
+		background-color: var(--theme-color);
 		width: 100%;
 		height: 100%;
 		display: flex;

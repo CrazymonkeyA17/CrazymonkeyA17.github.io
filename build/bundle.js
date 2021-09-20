@@ -3103,43 +3103,43 @@ var app = (function () {
     			t19 = space();
     			p2 = element("p");
     			p2.textContent = "All the languages that I know. Maybe....";
-    			attr_dev(div0, "class", "iconcaption svelte-1nal2z2");
+    			attr_dev(div0, "class", "iconcaption svelte-vo6o48");
     			add_location(div0, file$6, 23, 6, 726);
-    			attr_dev(div1, "class", "icon svelte-1nal2z2");
+    			attr_dev(div1, "class", "icon svelte-vo6o48");
     			add_location(div1, file$6, 21, 4, 673);
-    			attr_dev(div2, "class", div2_class_value = "titlebanner code " + (/*section*/ ctx[0] === 1 ? "showmine" : "hidemine") + " svelte-1nal2z2");
+    			attr_dev(div2, "class", div2_class_value = "titlebanner code " + (/*section*/ ctx[0] === 1 ? "showmine" : "hidemine") + " svelte-vo6o48");
     			add_location(div2, file$6, 20, 2, 565);
     			add_location(h10, file$6, 28, 6, 899);
     			add_location(p0, file$6, 29, 6, 925);
     			attr_dev(div3, "class", "titleblock");
     			add_location(div3, file$6, 27, 4, 867);
-    			attr_dev(div4, "class", div4_class_value = "languagecontainer content " + (/*section*/ ctx[0] === 1 ? "show" : "hide") + " svelte-1nal2z2");
+    			attr_dev(div4, "class", div4_class_value = "languagecontainer content " + (/*section*/ ctx[0] === 1 ? "show" : "hide") + " svelte-vo6o48");
     			add_location(div4, file$6, 26, 2, 792);
-    			attr_dev(div5, "class", "iconcaption svelte-1nal2z2");
+    			attr_dev(div5, "class", "iconcaption svelte-vo6o48");
     			add_location(div5, file$6, 38, 6, 1300);
-    			attr_dev(div6, "class", "icon svelte-1nal2z2");
+    			attr_dev(div6, "class", "icon svelte-vo6o48");
     			add_location(div6, file$6, 36, 4, 1246);
-    			attr_dev(div7, "class", div7_class_value = "titlebanner tools " + (/*section*/ ctx[0] === 2 ? "showmine" : "hidemine") + " svelte-1nal2z2");
+    			attr_dev(div7, "class", div7_class_value = "titlebanner tools " + (/*section*/ ctx[0] === 2 ? "showmine" : "hidemine") + " svelte-vo6o48");
     			add_location(div7, file$6, 35, 2, 1137);
     			add_location(h11, file$6, 43, 6, 1466);
     			add_location(p1, file$6, 44, 6, 1492);
     			attr_dev(div8, "class", "titleblock");
     			add_location(div8, file$6, 42, 4, 1434);
-    			attr_dev(div9, "class", div9_class_value = "toolscontainer content " + (/*section*/ ctx[0] === 2 ? "show" : "hide") + " svelte-1nal2z2");
+    			attr_dev(div9, "class", div9_class_value = "toolscontainer content " + (/*section*/ ctx[0] === 2 ? "show" : "hide") + " svelte-vo6o48");
     			add_location(div9, file$6, 41, 2, 1362);
-    			attr_dev(div10, "class", "iconcaption svelte-1nal2z2");
+    			attr_dev(div10, "class", "iconcaption svelte-vo6o48");
     			add_location(div10, file$6, 50, 6, 1731);
-    			attr_dev(div11, "class", "icon svelte-1nal2z2");
+    			attr_dev(div11, "class", "icon svelte-vo6o48");
     			add_location(div11, file$6, 48, 4, 1678);
-    			attr_dev(div12, "class", div12_class_value = "titlebanner framework " + (/*section*/ ctx[0] === 3 ? "showmine" : "hidemine") + " svelte-1nal2z2");
+    			attr_dev(div12, "class", div12_class_value = "titlebanner framework " + (/*section*/ ctx[0] === 3 ? "showmine" : "hidemine") + " svelte-vo6o48");
     			add_location(div12, file$6, 47, 2, 1565);
     			add_location(h12, file$6, 55, 6, 1907);
     			add_location(p2, file$6, 56, 6, 1933);
     			attr_dev(div13, "class", "titleblock");
     			add_location(div13, file$6, 54, 4, 1875);
-    			attr_dev(div14, "class", div14_class_value = "frameworkscontainer content " + (/*section*/ ctx[0] === 3 ? "show" : "hide") + " svelte-1nal2z2");
+    			attr_dev(div14, "class", div14_class_value = "frameworkscontainer content " + (/*section*/ ctx[0] === 3 ? "show" : "hide") + " svelte-vo6o48");
     			add_location(div14, file$6, 53, 2, 1798);
-    			attr_dev(div15, "class", div15_class_value = "knowledgecontainer " + (/*section*/ ctx[0] === 0 ? "hidecontent" : "seecontent") + " svelte-1nal2z2");
+    			attr_dev(div15, "class", div15_class_value = "knowledgecontainer " + (/*section*/ ctx[0] === 0 ? "hidecontent" : "seecontent") + " svelte-vo6o48");
     			set_style(div15, "--theme-color", maincolor);
     			add_location(div15, file$6, 19, 0, 450);
     		},
@@ -3202,7 +3202,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (!current || dirty & /*section*/ 1 && div2_class_value !== (div2_class_value = "titlebanner code " + (/*section*/ ctx[0] === 1 ? "showmine" : "hidemine") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div2_class_value !== (div2_class_value = "titlebanner code " + (/*section*/ ctx[0] === 1 ? "showmine" : "hidemine") + " svelte-vo6o48")) {
     				attr_dev(div2, "class", div2_class_value);
     			}
 
@@ -3234,27 +3234,27 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div4_class_value !== (div4_class_value = "languagecontainer content " + (/*section*/ ctx[0] === 1 ? "show" : "hide") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div4_class_value !== (div4_class_value = "languagecontainer content " + (/*section*/ ctx[0] === 1 ? "show" : "hide") + " svelte-vo6o48")) {
     				attr_dev(div4, "class", div4_class_value);
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div7_class_value !== (div7_class_value = "titlebanner tools " + (/*section*/ ctx[0] === 2 ? "showmine" : "hidemine") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div7_class_value !== (div7_class_value = "titlebanner tools " + (/*section*/ ctx[0] === 2 ? "showmine" : "hidemine") + " svelte-vo6o48")) {
     				attr_dev(div7, "class", div7_class_value);
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div9_class_value !== (div9_class_value = "toolscontainer content " + (/*section*/ ctx[0] === 2 ? "show" : "hide") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div9_class_value !== (div9_class_value = "toolscontainer content " + (/*section*/ ctx[0] === 2 ? "show" : "hide") + " svelte-vo6o48")) {
     				attr_dev(div9, "class", div9_class_value);
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div12_class_value !== (div12_class_value = "titlebanner framework " + (/*section*/ ctx[0] === 3 ? "showmine" : "hidemine") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div12_class_value !== (div12_class_value = "titlebanner framework " + (/*section*/ ctx[0] === 3 ? "showmine" : "hidemine") + " svelte-vo6o48")) {
     				attr_dev(div12, "class", div12_class_value);
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div14_class_value !== (div14_class_value = "frameworkscontainer content " + (/*section*/ ctx[0] === 3 ? "show" : "hide") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div14_class_value !== (div14_class_value = "frameworkscontainer content " + (/*section*/ ctx[0] === 3 ? "show" : "hide") + " svelte-vo6o48")) {
     				attr_dev(div14, "class", div14_class_value);
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div15_class_value !== (div15_class_value = "knowledgecontainer " + (/*section*/ ctx[0] === 0 ? "hidecontent" : "seecontent") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div15_class_value !== (div15_class_value = "knowledgecontainer " + (/*section*/ ctx[0] === 0 ? "hidecontent" : "seecontent") + " svelte-vo6o48")) {
     				attr_dev(div15, "class", div15_class_value);
     			}
     		},
