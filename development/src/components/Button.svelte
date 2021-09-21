@@ -20,15 +20,12 @@
     box-shadow: inset 0 0 0 0 #ffffff;
     transition: ease-out 0.5s;
 	}
-  button.small {
-    
-  }
-  button.big {
+  .big {
     border-color: white;
     border-left-width: 0.2em;
     border-left-style: solid;
   }
-  button.big:hover {
+  .big:hover {
     color: #522e90;
     box-shadow: inset 47vw 0 0 0 #ffffff;
   }

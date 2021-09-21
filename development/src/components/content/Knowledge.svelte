@@ -30,7 +30,7 @@
       <p>All the languages that I know. Maybe....</p>
     </div>
     {#each languages as language}
-      <LangBlock name={language.name} level={language.level} comment={language.comment}/>
+      <LangBlock name={language.name} level={language.level} comment={language.comment} imgsrc={language.img}/>
     {/each}
   </div>
   <div class="titlebanner tools {section === 2?"showmine":"hidemine"}" on:click={() => toggleSection(2)}>
@@ -74,8 +74,8 @@
     justify-content: center;
     width: calc(100vw / 3);
     font-size: 4em;
-    animation-timing-function: ease-in-out;
-    transition: 1s;
+    animation-timing-function: linear;
+    transition: 0.5s;
   }
 
   .seecontent .titlebanner {

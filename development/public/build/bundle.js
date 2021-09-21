@@ -1085,51 +1085,61 @@ var app = (function () {
         "name":"C++",
         "level":3,
         "comment":"I have never had to use this in a professional setting aside from a Co-op at Blackberry, originally coding in C++ 98. I'm updating this skill by going through a textbook into C++ 11/14. I'll jump into a personal project shortly after, probably something robot related.",
+        "img":"/img/cpluspluslogo.png"
       },
       {
         "name":"Python",
         "level":3,
         "comment":"I started learning Python as I had heard a lot about it by word of mouth. This was quite a fun and straight forward language. It definitly pushes and promotes code coding practices",
+        "img":"/img/pngaaa.com-619138.png"
       },
       {
         "name":"Javascript",
         "level":3,
         "comment":"I got into Javascript by accident through a co-op where I needed to generate a mvp website. I didn't come back to it until recently when I was exploring the best way to interface with AutoCAD. I'm glad I came back because it looks like I didn't learn enough.",
+        "img":"/img/JavaScript-logo.png"
       },
       {
         "name":"G-Code",
         "level":4,
         "comment":"I ended up learning this at my first role as a Project Engineer. I kept on losing my manufacturing techs as a resource so I ended up having to fix and generate new CNC programs. This language is quite simliar to Assembly and SVG. The language has general codes that all machines understand and machine specific codes that only the machine being worked on will understand.",
+        "img":"/img/GCODE_Logo.png"
       },
       {
         "name":"AutoLISP",
         "level":4,
         "comment":"Why someone thought this language should exist as part of the AutoCAD suite baffles me. It is quite simple but too simple I am quite glad that there are other options as the brackets really got to me after a while of coding in the built in IDE, I got severe VBA PTSD flashbacks.",
+        "img":"/img/LISP_Logo.png"
       },
       {
         "name":"MATLAB",
         "level":3,
         "comment":"Most of my exposure to this language has been in University, manufacturing doesnt tend to do vector math very often and neither do I. Otherwise I enjoyed working in this language, no crazy quirks and quite powerful",
+        "img":"/img/pngegg.png"
       },
       {
         "name":"SQL",
         "level":2,
         "comment":"Databases have been quite touch and go for me. I've never had a project that required a heavy use of SQL so my understanding of the limitations of the technology is limited (no pun intended). I'll end up implementing some kind of highscore system on this website to learn this in more depth.",
+        "img":"/img/SQL_Logo.png"
       },
       {
         "name":"Latex",
         "level":2,
         "comment":"A lot of my classmates back in University were using this language for resume building and research papers. I'll admit I wasnt too confident in myself so I stuck with my trusty Word. Recently I decided why not give it a shot with my latest resumes. I have to admit it is quite fun to watch my content just dance into different formats as I switch different variables. However I am probably going to try for a web based resume now.",
+        "img":"/img/LATEX_Logo.png"
       },
       {
         "name":"HTML",
         "level":3,
-        "comment":"Similiar to Javascript I learned when making the mvp website. I know enough to be dangerous at this point."
+        "comment":"Similiar to Javascript I learned when making the mvp website. I know enough to be dangerous at this point.",
+        "img":"/img/HTML_Logo.png"
       },
       {
         "name":"CSS",
         "level":3,
-        "comment":"Similiar to Javascript I learned when making the mvp website. I thought I knew enough but I'm now learning the toolsets that make css coding a bit easier."
+        "comment":"Similiar to Javascript I learned when making the mvp website. I thought I knew enough but I'm now learning the toolsets that make css coding a bit easier.",
+        "img":"/img/CSS_Logo.png"
       }
     ];
 
@@ -1679,7 +1689,7 @@ var app = (function () {
     			button = element("button");
     			t0 = text("  ");
     			t1 = text(/*buttontext*/ ctx[0]);
-    			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*largeMode*/ ctx[1] ? "big" : "small") + " svelte-1lrnin"));
+    			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*largeMode*/ ctx[1] ? "big" : "small") + " svelte-1p2ggoc"));
     			add_location(button, file$c, 4, 0, 96);
     		},
     		l: function claim(nodes) {
@@ -1698,7 +1708,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*buttontext*/ 1) set_data_dev(t1, /*buttontext*/ ctx[0]);
 
-    			if (dirty & /*largeMode*/ 2 && button_class_value !== (button_class_value = "" + (null_to_empty(/*largeMode*/ ctx[1] ? "big" : "small") + " svelte-1lrnin"))) {
+    			if (dirty & /*largeMode*/ 2 && button_class_value !== (button_class_value = "" + (null_to_empty(/*largeMode*/ ctx[1] ? "big" : "small") + " svelte-1p2ggoc"))) {
     				attr_dev(button, "class", button_class_value);
     			}
     		},
@@ -2742,18 +2752,25 @@ var app = (function () {
     const file$7 = "src\\components\\content\\LangBlock.svelte";
 
     function create_fragment$7(ctx) {
-    	let div3;
-    	let div1;
+    	let div5;
+    	let div0;
     	let img;
     	let img_src_value;
+    	let img_alt_value;
     	let t0;
-    	let div0;
-    	let h3;
-    	let t1;
-    	let progressbar;
-    	let t2;
+    	let div4;
     	let div2;
+    	let h30;
+    	let t1;
+    	let t2;
+    	let div1;
+    	let progressbar;
+    	let h31;
+    	let t3_value = /*levelAlt*/ ctx[4][/*level*/ ctx[1] - 1] + "";
     	let t3;
+    	let t4;
+    	let div3;
+    	let t5;
     	let current;
 
     	progressbar = new ProgressBar({
@@ -2763,45 +2780,64 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div3 = element("div");
-    			div1 = element("div");
+    			div5 = element("div");
+    			div0 = element("div");
     			img = element("img");
     			t0 = space();
-    			div0 = element("div");
-    			h3 = element("h3");
-    			t1 = text(/*name*/ ctx[0]);
-    			create_component(progressbar.$$.fragment);
-    			t2 = space();
+    			div4 = element("div");
     			div2 = element("div");
-    			t3 = text(/*comment*/ ctx[2]);
+    			h30 = element("h3");
+    			t1 = text(/*name*/ ctx[0]);
+    			t2 = space();
+    			div1 = element("div");
+    			create_component(progressbar.$$.fragment);
+    			h31 = element("h3");
+    			t3 = text(t3_value);
+    			t4 = space();
+    			div3 = element("div");
+    			t5 = text(/*comment*/ ctx[2]);
     			if (!src_url_equal(img.src, img_src_value = /*imgsrc*/ ctx[3])) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "");
-    			add_location(img, file$7, 11, 4, 258);
-    			add_location(h3, file$7, 12, 26, 311);
-    			attr_dev(div0, "class", "progress svelte-1cwv173");
-    			add_location(div0, file$7, 12, 4, 289);
-    			attr_dev(div1, "class", "cardheader");
-    			add_location(div1, file$7, 10, 2, 228);
-    			attr_dev(div2, "class", "description");
-    			add_location(div2, file$7, 15, 2, 378);
-    			attr_dev(div3, "class", "langblock");
-    			add_location(div3, file$7, 9, 0, 201);
+    			attr_dev(img, "alt", img_alt_value = "" + (/*name*/ ctx[0] + " logo"));
+    			attr_dev(img, "class", "svelte-1ldtc7d");
+    			add_location(img, file$7, 13, 4, 413);
+    			attr_dev(div0, "class", "cardleft svelte-1ldtc7d");
+    			add_location(div0, file$7, 12, 2, 385);
+    			attr_dev(h30, "class", "title svelte-1ldtc7d");
+    			add_location(h30, file$7, 17, 6, 524);
+    			attr_dev(h31, "class", "progresstext svelte-1ldtc7d");
+    			add_location(h31, file$7, 19, 36, 621);
+    			attr_dev(div1, "class", "progress svelte-1ldtc7d");
+    			add_location(div1, file$7, 18, 6, 561);
+    			attr_dev(div2, "class", "skilltitle svelte-1ldtc7d");
+    			add_location(div2, file$7, 16, 4, 492);
+    			attr_dev(div3, "class", "description");
+    			add_location(div3, file$7, 22, 4, 702);
+    			attr_dev(div4, "class", "cardright svelte-1ldtc7d");
+    			add_location(div4, file$7, 15, 2, 463);
+    			attr_dev(div5, "class", "langblock svelte-1ldtc7d");
+    			set_style(div5, "--theme-color", maincolor);
+    			add_location(div5, file$7, 11, 0, 323);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div3, anchor);
-    			append_dev(div3, div1);
-    			append_dev(div1, img);
-    			append_dev(div1, t0);
-    			append_dev(div1, div0);
-    			append_dev(div0, h3);
-    			append_dev(h3, t1);
-    			mount_component(progressbar, div0, null);
-    			append_dev(div3, t2);
-    			append_dev(div3, div2);
-    			append_dev(div2, t3);
+    			insert_dev(target, div5, anchor);
+    			append_dev(div5, div0);
+    			append_dev(div0, img);
+    			append_dev(div5, t0);
+    			append_dev(div5, div4);
+    			append_dev(div4, div2);
+    			append_dev(div2, h30);
+    			append_dev(h30, t1);
+    			append_dev(div2, t2);
+    			append_dev(div2, div1);
+    			mount_component(progressbar, div1, null);
+    			append_dev(div1, h31);
+    			append_dev(h31, t3);
+    			append_dev(div4, t4);
+    			append_dev(div4, div3);
+    			append_dev(div3, t5);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -2809,11 +2845,16 @@ var app = (function () {
     				attr_dev(img, "src", img_src_value);
     			}
 
+    			if (!current || dirty & /*name*/ 1 && img_alt_value !== (img_alt_value = "" + (/*name*/ ctx[0] + " logo"))) {
+    				attr_dev(img, "alt", img_alt_value);
+    			}
+
     			if (!current || dirty & /*name*/ 1) set_data_dev(t1, /*name*/ ctx[0]);
     			const progressbar_changes = {};
     			if (dirty & /*level*/ 2) progressbar_changes.notch = /*level*/ ctx[1];
     			progressbar.$set(progressbar_changes);
-    			if (!current || dirty & /*comment*/ 4) set_data_dev(t3, /*comment*/ ctx[2]);
+    			if ((!current || dirty & /*level*/ 2) && t3_value !== (t3_value = /*levelAlt*/ ctx[4][/*level*/ ctx[1] - 1] + "")) set_data_dev(t3, t3_value);
+    			if (!current || dirty & /*comment*/ 4) set_data_dev(t5, /*comment*/ ctx[2]);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -2825,7 +2866,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div3);
+    			if (detaching) detach_dev(div5);
     			destroy_component(progressbar);
     		}
     	};
@@ -2848,6 +2889,7 @@ var app = (function () {
     	let { level = 1 } = $$props;
     	let { comment = "Some Comment" } = $$props;
     	let { imgsrc = "" } = $$props;
+    	let levelAlt = ["Novice", "Learning", "Proficient", "Expert", "Master"];
     	const writable_props = ['name', 'level', 'comment', 'imgsrc'];
 
     	Object.keys($$props).forEach(key => {
@@ -2863,10 +2905,12 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		ProgressBar,
+    		maincolor,
     		name,
     		level,
     		comment,
-    		imgsrc
+    		imgsrc,
+    		levelAlt
     	});
 
     	$$self.$inject_state = $$props => {
@@ -2874,13 +2918,14 @@ var app = (function () {
     		if ('level' in $$props) $$invalidate(1, level = $$props.level);
     		if ('comment' in $$props) $$invalidate(2, comment = $$props.comment);
     		if ('imgsrc' in $$props) $$invalidate(3, imgsrc = $$props.imgsrc);
+    		if ('levelAlt' in $$props) $$invalidate(4, levelAlt = $$props.levelAlt);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [name, level, comment, imgsrc];
+    	return [name, level, comment, imgsrc, levelAlt];
     }
 
     class LangBlock extends SvelteComponentDev {
@@ -2947,7 +2992,8 @@ var app = (function () {
     			props: {
     				name: /*language*/ ctx[6].name,
     				level: /*language*/ ctx[6].level,
-    				comment: /*language*/ ctx[6].comment
+    				comment: /*language*/ ctx[6].comment,
+    				imgsrc: /*language*/ ctx[6].img
     			},
     			$$inline: true
     		});
@@ -3103,43 +3149,43 @@ var app = (function () {
     			t19 = space();
     			p2 = element("p");
     			p2.textContent = "All the languages that I know. Maybe....";
-    			attr_dev(div0, "class", "iconcaption svelte-1nal2z2");
+    			attr_dev(div0, "class", "iconcaption svelte-w01d0k");
     			add_location(div0, file$6, 23, 6, 726);
-    			attr_dev(div1, "class", "icon svelte-1nal2z2");
+    			attr_dev(div1, "class", "icon svelte-w01d0k");
     			add_location(div1, file$6, 21, 4, 673);
-    			attr_dev(div2, "class", div2_class_value = "titlebanner code " + (/*section*/ ctx[0] === 1 ? "showmine" : "hidemine") + " svelte-1nal2z2");
+    			attr_dev(div2, "class", div2_class_value = "titlebanner code " + (/*section*/ ctx[0] === 1 ? "showmine" : "hidemine") + " svelte-w01d0k");
     			add_location(div2, file$6, 20, 2, 565);
     			add_location(h10, file$6, 28, 6, 899);
     			add_location(p0, file$6, 29, 6, 925);
     			attr_dev(div3, "class", "titleblock");
     			add_location(div3, file$6, 27, 4, 867);
-    			attr_dev(div4, "class", div4_class_value = "languagecontainer content " + (/*section*/ ctx[0] === 1 ? "show" : "hide") + " svelte-1nal2z2");
+    			attr_dev(div4, "class", div4_class_value = "languagecontainer content " + (/*section*/ ctx[0] === 1 ? "show" : "hide") + " svelte-w01d0k");
     			add_location(div4, file$6, 26, 2, 792);
-    			attr_dev(div5, "class", "iconcaption svelte-1nal2z2");
-    			add_location(div5, file$6, 38, 6, 1300);
-    			attr_dev(div6, "class", "icon svelte-1nal2z2");
-    			add_location(div6, file$6, 36, 4, 1246);
-    			attr_dev(div7, "class", div7_class_value = "titlebanner tools " + (/*section*/ ctx[0] === 2 ? "showmine" : "hidemine") + " svelte-1nal2z2");
-    			add_location(div7, file$6, 35, 2, 1137);
-    			add_location(h11, file$6, 43, 6, 1466);
-    			add_location(p1, file$6, 44, 6, 1492);
+    			attr_dev(div5, "class", "iconcaption svelte-w01d0k");
+    			add_location(div5, file$6, 38, 6, 1322);
+    			attr_dev(div6, "class", "icon svelte-w01d0k");
+    			add_location(div6, file$6, 36, 4, 1268);
+    			attr_dev(div7, "class", div7_class_value = "titlebanner tools " + (/*section*/ ctx[0] === 2 ? "showmine" : "hidemine") + " svelte-w01d0k");
+    			add_location(div7, file$6, 35, 2, 1159);
+    			add_location(h11, file$6, 43, 6, 1488);
+    			add_location(p1, file$6, 44, 6, 1514);
     			attr_dev(div8, "class", "titleblock");
-    			add_location(div8, file$6, 42, 4, 1434);
-    			attr_dev(div9, "class", div9_class_value = "toolscontainer content " + (/*section*/ ctx[0] === 2 ? "show" : "hide") + " svelte-1nal2z2");
-    			add_location(div9, file$6, 41, 2, 1362);
-    			attr_dev(div10, "class", "iconcaption svelte-1nal2z2");
-    			add_location(div10, file$6, 50, 6, 1731);
-    			attr_dev(div11, "class", "icon svelte-1nal2z2");
-    			add_location(div11, file$6, 48, 4, 1678);
-    			attr_dev(div12, "class", div12_class_value = "titlebanner framework " + (/*section*/ ctx[0] === 3 ? "showmine" : "hidemine") + " svelte-1nal2z2");
-    			add_location(div12, file$6, 47, 2, 1565);
-    			add_location(h12, file$6, 55, 6, 1907);
-    			add_location(p2, file$6, 56, 6, 1933);
+    			add_location(div8, file$6, 42, 4, 1456);
+    			attr_dev(div9, "class", div9_class_value = "toolscontainer content " + (/*section*/ ctx[0] === 2 ? "show" : "hide") + " svelte-w01d0k");
+    			add_location(div9, file$6, 41, 2, 1384);
+    			attr_dev(div10, "class", "iconcaption svelte-w01d0k");
+    			add_location(div10, file$6, 50, 6, 1753);
+    			attr_dev(div11, "class", "icon svelte-w01d0k");
+    			add_location(div11, file$6, 48, 4, 1700);
+    			attr_dev(div12, "class", div12_class_value = "titlebanner framework " + (/*section*/ ctx[0] === 3 ? "showmine" : "hidemine") + " svelte-w01d0k");
+    			add_location(div12, file$6, 47, 2, 1587);
+    			add_location(h12, file$6, 55, 6, 1929);
+    			add_location(p2, file$6, 56, 6, 1955);
     			attr_dev(div13, "class", "titleblock");
-    			add_location(div13, file$6, 54, 4, 1875);
-    			attr_dev(div14, "class", div14_class_value = "frameworkscontainer content " + (/*section*/ ctx[0] === 3 ? "show" : "hide") + " svelte-1nal2z2");
-    			add_location(div14, file$6, 53, 2, 1798);
-    			attr_dev(div15, "class", div15_class_value = "knowledgecontainer " + (/*section*/ ctx[0] === 0 ? "hidecontent" : "seecontent") + " svelte-1nal2z2");
+    			add_location(div13, file$6, 54, 4, 1897);
+    			attr_dev(div14, "class", div14_class_value = "frameworkscontainer content " + (/*section*/ ctx[0] === 3 ? "show" : "hide") + " svelte-w01d0k");
+    			add_location(div14, file$6, 53, 2, 1820);
+    			attr_dev(div15, "class", div15_class_value = "knowledgecontainer " + (/*section*/ ctx[0] === 0 ? "hidecontent" : "seecontent") + " svelte-w01d0k");
     			set_style(div15, "--theme-color", maincolor);
     			add_location(div15, file$6, 19, 0, 450);
     		},
@@ -3202,7 +3248,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (!current || dirty & /*section*/ 1 && div2_class_value !== (div2_class_value = "titlebanner code " + (/*section*/ ctx[0] === 1 ? "showmine" : "hidemine") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div2_class_value !== (div2_class_value = "titlebanner code " + (/*section*/ ctx[0] === 1 ? "showmine" : "hidemine") + " svelte-w01d0k")) {
     				attr_dev(div2, "class", div2_class_value);
     			}
 
@@ -3234,27 +3280,27 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div4_class_value !== (div4_class_value = "languagecontainer content " + (/*section*/ ctx[0] === 1 ? "show" : "hide") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div4_class_value !== (div4_class_value = "languagecontainer content " + (/*section*/ ctx[0] === 1 ? "show" : "hide") + " svelte-w01d0k")) {
     				attr_dev(div4, "class", div4_class_value);
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div7_class_value !== (div7_class_value = "titlebanner tools " + (/*section*/ ctx[0] === 2 ? "showmine" : "hidemine") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div7_class_value !== (div7_class_value = "titlebanner tools " + (/*section*/ ctx[0] === 2 ? "showmine" : "hidemine") + " svelte-w01d0k")) {
     				attr_dev(div7, "class", div7_class_value);
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div9_class_value !== (div9_class_value = "toolscontainer content " + (/*section*/ ctx[0] === 2 ? "show" : "hide") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div9_class_value !== (div9_class_value = "toolscontainer content " + (/*section*/ ctx[0] === 2 ? "show" : "hide") + " svelte-w01d0k")) {
     				attr_dev(div9, "class", div9_class_value);
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div12_class_value !== (div12_class_value = "titlebanner framework " + (/*section*/ ctx[0] === 3 ? "showmine" : "hidemine") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div12_class_value !== (div12_class_value = "titlebanner framework " + (/*section*/ ctx[0] === 3 ? "showmine" : "hidemine") + " svelte-w01d0k")) {
     				attr_dev(div12, "class", div12_class_value);
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div14_class_value !== (div14_class_value = "frameworkscontainer content " + (/*section*/ ctx[0] === 3 ? "show" : "hide") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div14_class_value !== (div14_class_value = "frameworkscontainer content " + (/*section*/ ctx[0] === 3 ? "show" : "hide") + " svelte-w01d0k")) {
     				attr_dev(div14, "class", div14_class_value);
     			}
 
-    			if (!current || dirty & /*section*/ 1 && div15_class_value !== (div15_class_value = "knowledgecontainer " + (/*section*/ ctx[0] === 0 ? "hidecontent" : "seecontent") + " svelte-1nal2z2")) {
+    			if (!current || dirty & /*section*/ 1 && div15_class_value !== (div15_class_value = "knowledgecontainer " + (/*section*/ ctx[0] === 0 ? "hidecontent" : "seecontent") + " svelte-w01d0k")) {
     				attr_dev(div15, "class", div15_class_value);
     			}
     		},
