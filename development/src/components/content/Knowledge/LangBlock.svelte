@@ -1,6 +1,6 @@
 <script>
-  import ProgressBar from "./ProgressBar.svelte";
-  import { maincolor } from "../../constants.js"
+  import ProgressBar from "../ProgressBar.svelte";
+  import { maincolor } from "../../../constants.js"
 
   export let name = "Language";
   export let level = 1;

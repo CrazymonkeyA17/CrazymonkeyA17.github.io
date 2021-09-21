@@ -1,6 +1,6 @@
 <script lang="ts">
   import About from "./content/About.svelte";
-  import Knowledge from "./content/Knowledge.svelte";
+  import Knowledge from "./content/Knowledge/Knowledge.svelte";
   import Current from "./content/Current.svelte";
   import Experience from "./content/Experience.svelte";
   import Projects from "./content/Projects.svelte";

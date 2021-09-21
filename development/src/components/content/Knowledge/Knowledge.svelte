@@ -1,11 +1,12 @@
 <script>
   import Fa from 'svelte-fa';
-  import LangBlock from "./LangBlock.svelte";
-  import { languages, maincolor } from "../../constants";
+  import Languages from "./Languages.svelte";
+  import Tools from "./Tools.svelte";
+  import Frameworks from "./Frameworks.svelte";
+  import { maincolor } from "../../../constants";
   import { faCrop, faTools, faCode } from '@fortawesome/free-solid-svg-icons';
   
   let section = 0;
-  let tab = ["nothing","start", "middle", "end"]
 
   const toggleSection = (val) => {
     if (val === section) {
@@ -18,45 +19,32 @@
 </script>
 
 <div class="knowledgecontainer {section === 0?"hidecontent":"seecontent"}"  style="--theme-color: {maincolor}">
-  <div class="titlebanner code {section === 1?"showmine":"hidemine"}" on:click={() => toggleSection(1)}>
+  <div class="titlebanner code" on:click={() => toggleSection(1)}>
     <div class="icon">
       <Fa icon={faCode}/>
       <div class="iconcaption">Languages</div>
     </div>
   </div>
-  <div class="languagecontainer content {section === 1?"show":"hide"}">
-    <div class="titleblock">
-      <h1>Languages</h1>
-      <p>All the languages that I know. Maybe....</p>
-    </div>
-    {#each languages as language}
-      <LangBlock name={language.name} level={language.level} comment={language.comment} imgsrc={language.img}/>
-    {/each}
+  <div class="content {section === 1?"show":"hide"}">
+    <Languages/>
   </div>
-  <div class="titlebanner tools {section === 2?"showmine":"hidemine"}" on:click={() => toggleSection(2)}>
+  <div class="titlebanner tools" on:click={() => toggleSection(2)}>
     <div class="icon">
       <Fa icon={faTools}/>
       <div class="iconcaption">Tools</div>
     </div>
   </div>
-  <div class="toolscontainer content {section === 2?"show":"hide"}">
-    <div class="titleblock">
-      <h1>Languages</h1>
-      <p>All the languages that I know. Maybe....</p>
-    </div>
+  <div class="content {section === 2?"show":"hide"}">
+    <Tools/>
   </div>
-  <div class="titlebanner framework {section === 3?"showmine":"hidemine"}" on:click={() => toggleSection(3)}>
+  <div class="titlebanner framework" on:click={() => toggleSection(3)}>
     <div class="icon">
       <Fa icon={faCrop}/>
       <div class="iconcaption">Frameworks</div>
     </div>
   </div>
-  <div class="frameworkscontainer content {section === 3?"show":"hide"}">
-    <div class="titleblock">
-      <h1>Languages</h1>
-      <p>All the languages that I know. Maybe....</p>
-    </div>
-    
+  <div class="content {section === 3?"show":"hide"}">
+    <Frameworks/>
   </div>
 </div>
 

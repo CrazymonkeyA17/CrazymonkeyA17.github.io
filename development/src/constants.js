@@ -18,7 +18,7 @@ export const languages = [
   {
     "name":"Python",
     "level":3,
-    "comment":"I started learning Python as I had heard a lot about it by word of mouth. This was quite a fun and straight forward language. It definitly pushes and promotes code coding practices",
+    "comment":"I started learning Python as I had heard a lot about it by word of mouth. This was quite a fun and straight forward language. It definitely pushes and promotes good coding practices",
     "img":"/img/pngaaa.com-619138.png"
   },
   {
@@ -68,5 +68,17 @@ export const languages = [
     "level":3,
     "comment":"Similiar to Javascript I learned when making the mvp website. I thought I knew enough but I'm now learning the toolsets that make css coding a bit easier.",
     "img":"/img/CSS_Logo.png"
+  }
+];
+
+export const tools = [
+  {
+
+  },
+  {
+
+  },
+  {
+    
   }
 ];
