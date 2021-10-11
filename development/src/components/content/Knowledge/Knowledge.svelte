@@ -44,7 +44,7 @@
     </div>
   </div>
   <div class="content {section === 3?"show":"hide"}">
-    <Frameworks/>
+    <Frameworks status={section === 3}/>
   </div>
 </div>
 
@@ -98,6 +98,7 @@
     justify-content: space-between;
     height: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .show {

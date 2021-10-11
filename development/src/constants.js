@@ -94,15 +94,20 @@ export const tools = [
   },
   {
     name:"VSCode",
-    comment: "This tool was touch and go ",
+    comment: "RIP Notepad++. Sometimes when Microsoft pays attention they really build a brilliant tool. This is one of those times, aside from its lack luster github capabilities this is an absolutely excellent code editor to work with.",
     img: "./img/VSC_Logo.png"
+  },
+  {
+    name:"Vagrant",
+    comment: "I didn't feel like dual booting my computer and instead of downloading WSL I just decided to try a virtual machine. I had heard of Vagrant so I decided to give it a shot.",
+    img: "./img/VAGRANT_Logo.png"
   }
 ];
 
 export const frameworks = [
   {
     name:"Svelte",
-    comment: "This tool was touch and go ",
+    comment: "I had never used frameworks before, ",
     img: "./img/SVELTE_Logo.png"
   },
   {
